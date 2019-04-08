@@ -21,7 +21,10 @@ What things you need to install the software and how to install them
 ## Built With
 
   * [Python](https://www.python.org/) - Core Language
-  * [Sci Kit Learn](https://scikit-learn.org/stable/) - Machine Learning dependencies
+  * [SciKit Learn](https://scikit-learn.org/stable/) - Machine Learning dependencies
+  * [Quandl](https://www.quandl.com/) -Financial data and Stock History
+  * [Pandas](https://pandas.pydata.org/) - Data manipulation
+  * [Tkinter](https://docs.python.org/2/library/tkinter.html) - GUI manipulation and key binding
   * [Matplotlib](https://matplotlib.org/) - Graphing Library
 
 ## Authors
