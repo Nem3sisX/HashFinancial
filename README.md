@@ -1,3 +1,31 @@
-# CS102-project
-CS102 project
-A Stock Price Ticker
+# HashFinancial - A Full-Stacked Stock App
+A Stock App
+ 
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+  * install dependencies using `pip install -r requirements.txt` in your virtual-environment.
+
+### Installation
+
+  * Clone this repository from [here](https://github.com/Nem3sisX/CS102-project.git).
+  * Run programs using any preferred IDE. ( I used PyCharm Community Edition 2018.3.3 ) :P
+  * If anything interesting pops up do let me know. :D
+
+## Built With
+
+  * [Python](https://www.python.org/) - Core Language
+  * [Matplotlib](https://matplotlib.org/) - Image Manipulation
+
+## Authors
+
+* **Shresth Rana** - [Nem3sisX](https://github.com/Nem3sisX)
+* **Abhinav Gupta** - [Abhinavvx](https://github.com/abhinavvx)
+* **Shresth Rana** - [Nem3sisX](https://github.com/Nem3sisX)
+* **Shresth Rana** - [Nem3sisX](https://github.com/Nem3sisX)
