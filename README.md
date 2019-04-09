@@ -27,7 +27,7 @@ What things you need to install the software and how to install them
 
 ## Authors
 
-* **Shresth Rana** - [Nem3sisX](https://github.com/Nem3sisX)
-* **Abhinav Gupta** -[Abhinavvx](https://github.com/abhinavvx)
-* **Shresth Rana** - [Nem3sisX](https://github.com/Nem3sisX)
+* **Shresth Rana**     -[Nem3sisX](https://github.com/Nem3sisX)
+* **Abhinav Gupta**    -[Abhinavvx](https://github.com/abhinavvx)
+* **Riona Chakraborty**-[RionaC](https://github.com/RionaC)
 * **Shresth Rana** - [Nem3sisX](https://github.com/Nem3sisX)
