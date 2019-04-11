@@ -1,5 +1,6 @@
 from tkinter import *
-
+import quandl
+#quandl.ApiConfig.api_key="ENTER_YOUR_OWN_API_KEY"
 root = Tk()
 root.title(string="HashFinancial")
 
@@ -30,8 +31,7 @@ symbol1.grid(row=5,column=0,sticky=E)
 
 entry2=Entry(frame2)
 entry2.grid(row=5,column=1)
-def Predictive_Analysis():
-    import quandl
+def Predictive_Analysis(z):
     import math, datetime
     import numpy as np
     from sklearn import preprocessing, model_selection
@@ -39,8 +39,9 @@ def Predictive_Analysis():
     import matplotlib.pyplot as plt
     from matplotlib import style
     import pickle
-    style.use('ggplot')
-    val = 'WIKI/' + entry1.get()
+    import matplotlib.patches as mpatches
+    style.use('bmh')
+    val = 'WIKI/' + z
     df = quandl.get(val)
 
     df = df[['Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume']]
@@ -92,12 +93,11 @@ def Predictive_Analysis():
     last_row_before_forecast = df.loc[last_date]
     df.loc[last_date] = np.hstack((last_row_before_forecast.values[:-1], last_row_before_forecast[forecast_col]))
 
-    df['Adj. Close'].plot()
-    df['Forecast'].plot()
+    df['Adj. Close'].plot(label = z+'-Existing Value')
+    df['Forecast'].plot(label = z+'-Forecast')
     plt.legend(loc=4)
     plt.xlabel('Date')
     plt.ylabel('Price')
-    plt.show()
 
 
 def display():
@@ -107,18 +107,26 @@ def display():
     style.use('ggplot')
     val = 'WIKI/' + entry1.get()
     df = quandl.get(val)
-    df['Adj. Close'].plot(label=entry1.get())
+    df['Adj. Close'].plot()
     val2 = 'WIKI/' + entry2.get()
     df2 = quandl.get(val2)
-    df2['Adj. Close'].plot(label=entry2.get())
+    df2['Adj. Close'].plot()
     plt.legend(loc=4)
+    plt.title(entry1.get() + ' versus ' + entry2.get(), fontsize=16, loc='center')
+    plt.show()
+
+def combin():
+    import matplotlib.pyplot as plt
+    Predictive_Analysis(entry1.get())
+    Predictive_Analysis(entry2.get())
+    plt.title(entry1.get()+' -versus- '+entry2.get(), fontsize=16, loc= 'center')
     plt.show()
 
 
 predict=Button(frame2,text='Current History', fg="green", command = display)
 predict.grid(columnspan=2)
 
-predict=Button(frame2,text='Predicted Values', fg="green", command = Predictive_Analysis)
+predict=Button(frame2,text='Predicted Values', fg="green", command = combin)
 predict.grid(columnspan=2)
 
 
