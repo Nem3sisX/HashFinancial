@@ -1,4 +1,4 @@
-# HashFinancial - a fully integrated stock research platform
+# HashFinancial - a fully integrated stock application
 
 ## Getting Started
 
