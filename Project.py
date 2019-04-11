@@ -19,13 +19,17 @@ hashname.pack(fill=X)
 
 
 # ****** main centre window *****
-symbol=Label(frame2,text='Enter Stock Symbol : ')
+symbol=Label(frame2,text='Enter first stock symbol : ')
 symbol.grid(row=4,column=0,sticky=E)
 
 entry1=Entry(frame2)
 entry1.grid(row=4,column=1)
 
+symbol1=Label(frame2,text='Enter second stock symbol : ')
+symbol1.grid(row=5,column=0,sticky=E)
 
+entry2=Entry(frame2)
+entry2.grid(row=5,column=1)
 def Predictive_Analysis():
     import quandl
     import math, datetime
@@ -96,7 +100,25 @@ def Predictive_Analysis():
     plt.show()
 
 
-predict=Button(frame2,text='Predict Now', fg="green", command = Predictive_Analysis)
+def display():
+    import quandl
+    import matplotlib.pyplot as plt
+    from matplotlib import style
+    style.use('ggplot')
+    val = 'WIKI/' + entry1.get()
+    df = quandl.get(val)
+    df['Adj. Close'].plot(label=entry1.get())
+    val2 = 'WIKI/' + entry2.get()
+    df2 = quandl.get(val2)
+    df2['Adj. Close'].plot(label=entry2.get())
+    plt.legend(loc=4)
+    plt.show()
+
+
+predict=Button(frame2,text='Current History', fg="green", command = display)
+predict.grid(columnspan=2)
+
+predict=Button(frame2,text='Predicted Values', fg="green", command = Predictive_Analysis)
 predict.grid(columnspan=2)
 
 
