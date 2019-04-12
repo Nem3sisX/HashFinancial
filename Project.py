@@ -1,6 +1,6 @@
 from tkinter import *
 import quandl
-#quandl.ApiConfig.api_key="ENTER_YOUR_OWN_API_KEY"
+quandl.ApiConfig.api_key="U5Bb9wDjWy_Ber9skhvh"
 root = Tk()
 root.title(string="HashFinancial")
 
@@ -31,6 +31,26 @@ symbol1.grid(row=5,column=0,sticky=E)
 
 entry2=Entry(frame2)
 entry2.grid(row=5,column=1)
+
+symbol2=Label(frame2,text='Enter third stock symbol : ')
+symbol2.grid(row=6,column=0,sticky=E)
+
+entry3=Entry(frame2)
+entry3.grid(row=6,column=1)
+
+symbol3=Label(frame2,text='Enter fourth stock symbol : ')
+symbol3.grid(row=7,column=0,sticky=E)
+
+entry4=Entry(frame2)
+entry4.grid(row=7,column=1)
+
+symbol4=Label(frame2,text='Enter fifth stock symbol : ')
+symbol4.grid(row=8,column=0,sticky=E)
+
+entry5=Entry(frame2)
+entry5.grid(row=8,column=1)
+
+
 def Predictive_Analysis(z):
     import math, datetime
     import numpy as np
@@ -93,9 +113,9 @@ def Predictive_Analysis(z):
     last_row_before_forecast = df.loc[last_date]
     df.loc[last_date] = np.hstack((last_row_before_forecast.values[:-1], last_row_before_forecast[forecast_col]))
 
-    df['Adj. Close'].plot(label = z+'-Existing Value')
+    df['Adj. Close'].plot(label = z+'-Existing Data')
     df['Forecast'].plot(label = z+'-Forecast')
-    plt.legend(loc=4)
+    plt.legend(loc=2)
     plt.xlabel('Date')
     plt.ylabel('Price')
 
@@ -104,29 +124,46 @@ def display():
     import quandl
     import matplotlib.pyplot as plt
     from matplotlib import style
-    style.use('ggplot')
+    style.use('bmh')
     val = 'WIKI/' + entry1.get()
     df = quandl.get(val)
-    df['Adj. Close'].plot()
+    plt.figure()
+    df['Adj. Close'].plot(label=entry1.get()+' -Current Data')
     val2 = 'WIKI/' + entry2.get()
     df2 = quandl.get(val2)
-    df2['Adj. Close'].plot()
-    plt.legend(loc=4)
-    plt.title(entry1.get() + ' versus ' + entry2.get(), fontsize=16, loc='center')
+    df2['Adj. Close'].plot(label=entry2.get()+' -Current Data')
+    val3 = 'WIKI/' + entry3.get()
+    df3 = quandl.get(val3)
+    df3['Adj. Close'].plot(label=entry3.get() + ' -Current Data')
+    val4 = 'WIKI/' + entry4.get()
+    df4 = quandl.get(val4)
+    df4['Adj. Close'].plot(label=entry4.get() + ' -Current Data')
+    val5 = 'WIKI/' + entry5.get()
+    df5 = quandl.get(val5)
+    df5['Adj. Close'].plot(label=entry5.get() + ' -Current Data')
+    plt.legend(loc=2)
+    plt.title('Current History:'+entry1.get()+'-'+entry2.get()+'-'+entry3.get()+'-'+entry4.get()+'-'+entry5.get(), fontsize=16, loc='center')
     plt.show()
+
+
 
 def combin():
     import matplotlib.pyplot as plt
+    plt.figure()
     Predictive_Analysis(entry1.get())
     Predictive_Analysis(entry2.get())
-    plt.title(entry1.get()+' -versus- '+entry2.get(), fontsize=16, loc= 'center')
+    Predictive_Analysis(entry3.get())
+    Predictive_Analysis(entry4.get())
+    Predictive_Analysis(entry5.get())
+    plt.title("Comparative Analysis:"+entry1.get()+'-'+entry2.get()+'-'+entry3.get()+'-'+entry4.get()+'-'+entry5.get(), fontsize=16, loc= 'center')
     plt.show()
 
 
-predict=Button(frame2,text='Current History', fg="green", command = display)
+
+predict = Button(frame2,text='Compare Current History',bg="gray7", fg="green", command = display)
 predict.grid(columnspan=2)
 
-predict=Button(frame2,text='Predicted Values', fg="green", command = combin)
+predict = Button(frame2,text='Compare Predicted Values',bg="gray7", fg="green", command = combin)
 predict.grid(columnspan=2)
 
 
