@@ -13,7 +13,7 @@ What things you need to install the software and how to install them
 ### Installation
 
   * Clone this repository from [here](https://github.com/Nem3sisX/CS102-project.git).
-  * Run programs using any preferred IDE. 
+  * Run the program using any preferred IDE. 
   * If anything interesting pops up do let me know. :D
 
 ## Built With
