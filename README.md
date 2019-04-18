@@ -1,5 +1,5 @@
 # HashFinancial - a fully integrated stock application
-
+ Implemented a Financial analysis python apllication as a project for CS102: Data Structures course.
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing.
