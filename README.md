@@ -1,5 +1,11 @@
 # HashFinancial - a fully integrated stock application
- Implemented a proof of concept Financial analysis python application as a project for CS102: Data Structures course.
+ HashFinancial is a proof of concept Financial analysis python application which was a freshman year project for CS102: Data    Structures course. It aims at a comparative analysis of several companies listed on NASDAQ through their ticker values. Linear Regression seemed a likely statistical method for prediction given our current scope of exposure to Machine Learning.
+
+<p align="center">
+  <img src="https://github.com/Nem3sisX/CS102-project/blob/master/base.png">
+</p>
+
+![screenshot](https://github.com/Nem3sisX/CS102-project/blob/master/output.png)
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing.
