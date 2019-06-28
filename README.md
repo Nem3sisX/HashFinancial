@@ -1,4 +1,5 @@
-# HashFinancial - a fully integrated stock application
+# HashFinancial - a fully integrated stock application [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Nem3sisX/CS102-project/issues) [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
+
  HashFinancial is a proof of concept Financial analysis python application which was a freshman year project for CS102: Data    Structures course. It aims at a comparative analysis of several companies listed on NASDAQ through their ticker values. Linear Regression seemed a likely statistical method for prediction given our current scope of exposure to Machine Learning.
 
 <p align="center">
