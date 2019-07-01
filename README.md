@@ -1,4 +1,4 @@
-# HashFinancial [![ForTheBadge built-with-science](http://ForTheBadge.com/images/badges/built-with-science.svg)](https://GitHub.com/Nem3sisX/) [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+# HashFinancial [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/) [![ForTheBadge built-with-science](http://ForTheBadge.com/images/badges/built-with-science.svg)](https://GitHub.com/Nem3sisX/) 
 
  __HashFinancial__ is, a proof of concept, financial analysis python application which was a freshman year project for __CS102: Data Structures__ course. It aims at a comparative analysis of several companies listed on NASDAQ through their ticker values. Linear Regression seemed a likely statistical method for prediction given our current scope of exposure to Machine Learning.
 
